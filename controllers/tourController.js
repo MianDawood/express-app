@@ -4,12 +4,10 @@ const Tour = require('../models/tourModel');
 // Get all tours
 exports.getAllTours = async (req, res) => {
   try {
-
     queryObj = {...req.query};
     removeFields = ['sort','limit','sort'];
     removeFields.forEach(element => delete queryObj[element]);
    let query = Tour.find(queryObj);
-  
    //sorting
    if(req.query.sort)
 {

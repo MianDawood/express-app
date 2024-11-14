@@ -11,7 +11,7 @@ app.use(express.json());
 connectDB(); 
 
 app.use('/api/v1/tours', tourRoutes);
-//app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/users', userRoutes);
 
 
 portfinder.getPort((err, port) => {
